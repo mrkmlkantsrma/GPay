@@ -1199,7 +1199,7 @@ input::-moz-focus-inner {
   padding: 0;
   position: absolute;
   right: 60px;
-  top: 36px;
+  top: 25px;
 }
 
 .home-logo a {
@@ -1213,8 +1213,8 @@ input::-moz-focus-inner {
 }
 
 .home-logo img {
-  width: 100px;
-  height: 25px;
+  width: 170px;
+  height: 40px;
 }
 
 
