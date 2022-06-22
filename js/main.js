@@ -31,7 +31,7 @@ function genLink() {
         }
         // https://upier-pp.vercel.app/api?url=upi://pay?pn=kmlkantsrma-1@oksbi~tn=UPIER~pa=kmlkantsrma-1@oksbi~cu=INR~am=1
         var payWith = 'https://'+parserhostname+'/api?url=upi://pay?pn='+vpaset+'~tn=KAMAL~pa='+vpaset+'~cu=INR~am='+amountset;
-        var UpiToPay = 'upi://pay?pn='+vpaset+'&tn=KAMAL&pa='+vpaset+'&cu=INR&am='+amountset;
+        var UpiToPay = 'upi://pay?pn='+vpaset+'&pa='+vpaset+'&cu=INR&am='+amountset;
         document.getElementById("qrcodescan").src = payWith;
         document.getElementById("upibtn").href = UpiToPay;
         document.getElementById("holder").innerHTML = vpaset;
