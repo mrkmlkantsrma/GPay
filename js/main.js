@@ -42,8 +42,8 @@ function genLink() {
 }
 
 function payLink() {
-    // https://upier-pp.vercel.app/api?url=upi://pay?pn=kmlkantsrma-1@oksbi~tn=UPIER~pa=kmlkantsrma-1@oksbi~cu=INR~am=1
-    document.getElementById("qrcode1").src = 'https://upier-pp.vercel.app/api?url=upi://pay?pn='+vpaset+'~tn=UPIER~pa='+vpaset+'~cu=INR~am='+amountset;
+    // https://upier-pp.vercel.app/api?url=upi://pay?pn=kmlkantsrma-1@oksbi~tn=KAMAL~pa=kmlkantsrma-1@oksbi~cu=INR~am=1
+    document.getElementById("qrcode1").src = 'https://upier-pp.vercel.app/api?url=upi://pay?pn='+vpaset+'~tn=KAMAL~pa='+vpaset+'~cu=INR~am='+amountset;
 }
 
 function share() {
