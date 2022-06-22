@@ -29,12 +29,15 @@ function genLink() {
             document.getElementById("outlink").value = "";
             document.getElementById("outlink").select();
         }
-        // https://upier-pp.vercel.app/api?url=upi://pay?pn=kmlkantsrma-1@oksbi~tn=UPIER~pa=kmlkantsrma-1@oksbi~cu=INR~am=1
-        var payWith = 'https://'+parserhostname+'/api?url=upi://pay?pn='+vpaset+'~tn=UPIER~pa='+vpaset+'~cu=INR~am='+amountset;
-        var UpiToPay = 'upi://pay?pn='+vpaset+'&tn=UPIER&pa='+vpaset+'&cu=INR&am='+amountset;
+        // https://upier-pp.vercel.app/api?url=upi://pay?pn=kmlkantsrma-1@oksbi~tn=KAMAL~pa=kmlkantsrma-1@oksbi~cu=INR~am=1
+        var payWith = 'https://'+parserhostname+'/api?url=upi://pay?pn='+vpaset+'~tn=KAMAL~pa='+vpaset+'~cu=INR~am='+amountset;
+        var UpiToPay = 'upi://pay?pn='+vpaset+'&tn=KAMAL&pa='+vpaset+'&cu=INR&am='+amountset;
         document.getElementById("qrcodescan").src = payWith;
         document.getElementById("upibtn").href = UpiToPay;
         document.getElementById("holder").innerHTML = vpaset;
+        document.getElementById("amountPaying").innerHTML = amountset+" ₹";
+
+        
     } else {
         document.getElementById("invalid").style.visibility = "visible";
         document.getElementById("vpa").value = "";
@@ -42,15 +45,15 @@ function genLink() {
 }
 
 function payLink() {
-    // https://upier-pp.vercel.app/api?url=upi://pay?pn=kmlkantsrma-1@oksbi~tn=UPIER~pa=kmlkantsrma-1@oksbi~cu=INR~am=1
-    document.getElementById("qrcode1").src = 'https://upier-pp.vercel.app/api?url=upi://pay?pn='+vpaset+'~tn=UPIER~pa='+vpaset+'~cu=INR~am='+amountset;
+    // https://upier-pp.vercel.app/api?url=upi://pay?pn=kmlkantsrma-1@oksbi~tn=KAMAL~pa=kmlkantsrma-1@oksbi~cu=INR~am=1
+    document.getElementById("qrcode1").src = 'https://upier-pp.vercel.app/api?url=upi://pay?pn='+vpaset+'~tn=KAMAL~pa='+vpaset+'~cu=INR~am='+amountset;
 }
 
 function share() {
     if (navigator.share) {
         navigator.share({
-                title: 'Share | Upier',
-                text: "*Upier* \n\nShareable Secure Payment's Link for UPI :\n",
+                title: 'Share | KAMAL',
+                text: "*KAMAL* \n\nShareable Secure Payment's Scan for UPI :\n",
                 url: window.location.href
             }).then(() => {
                 console.log('Thanks for sharing!');
