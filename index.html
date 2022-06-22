@@ -1,171 +1,158 @@
 <!DOCTYPE html>
-<html oncontextmenu="return false" lang="en">
+<html class="no-js" lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="Tuhin Kanti Pal">
-    <title>G-Pay | KAMAL</title>
-    <meta name="description" content="Shareable Payment's Link for UPI">
-    <meta name="keywords" content="UPI, UPI Payment , Google Pay">
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Krona+One" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@900&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/button.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta charset="utf-8">
+    <title>GPAY | KML</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
 </head>
 <body onload="hideF()">
-    <div id="content" class="contentdiv">
-        <h1 class="headingw">
-        <img src="img/upi.svg" class="upilogo" width="100" onclick="window.location.href='https://www.bhimupi.org.in/';">
-      
-        If you are in PC Scan It with any UPI App to Pay
-        </h1>
-        <div id="inputd" class="inputdiv">
-            <div class="center">
-                <p class="pdetailupiid">
-                    Pay With <img src="img/gpay-logo.png" class="upilogo" width="52" onclick="window.location.href='https://www.bhimupi.org.in/';">
-       
-                </p>
-                <input type="hidden" id="vpa" value="kmlkantsrma-1@oksbi" placeholder="UPI ID" class="inputbox" readonly>
+    <main class="s-home s-home--particles">
+        <div id="particles-js" class="home-particles"></div>
+        <div class="gradient-overlay"></div>
+        <div class="home-content">
+            <div class="home-logo">
+                <a href="#">
+                    <a href="#">
+                        <img src="images/logo-white.png" alt="Homepage">
+                    </a>
+                </a>
             </div>
-            <div class="amountdiv">
-                <p class="pdetailamount" id="amount">
-                    Amount = <span>1</span> ₹
-                </p>
-            </div>
-            <div class="center">
-                <a onclick="genLink();" class="createb">C O N F I R M</a>
-                <p id="invalid" class="invalidtext">
-                    * Invalid VPA
-                </p>
-            </div>
-        </div>
-        <div id="outputd" class="outputdiv">
-            <div class="center">
-                <input type="hidden" id="outlink" readonly="true" class="inputbox">
+            <div class="row home-content__main">
+                <div class="col-seven home-content__text pull-right">
+                    <div class="inputdiv" id="inputd">
+                        <h3>Welcome to Google Pay</h3>
+                        <h3>Please confirm Amount To Pay</h3>
+                        <div class="confirmDiv">
+                            <input type="hidden" id="vpa" value="kmlkantsrma-1@oksbi" placeholder="UPI ID" class="inputbox" readonly>
+                            <input type="text" value="1 ₹" placeholder="Amount" class="confirmAmount" required="" disabled>
+                            <div class="confirmbox">
+                                <a onclick="genLink();" class="confirmbtn">C O N F I R M</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outputdiv" id="outputd" >
+                        <h3>If you are in PC Scan It with Google Pay</h3>
+                        <div class="outputarea">
+                            <div class="scannerArea">
+                                <img id="qrcodescan" class="qrsvg" width="240" height="240" src="">
+                            </div>
+                            <div class="holderArea">
+                                <p class="payattend">Pay amount of<span></span>  </p>
+                                <p class="totext">TO</p>
+                                <p id="copiedtext" class="copiedtxt" style="display: none;"></p>
+                                <p id="holder" class="vpatext"></p>
+                                <p class="hinttext">( If On Mobile Click Here! )</p>
+                                <a id="upibtn" class="paybutton">P A Y</a>
+                                <input type="hidden" id="outlink" readonly="true" class="inputbox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-five home-content__counter">
+                    <h3>Launched Days</h3>
+
+                    <div class="home-content__clock">
+                        <div class="top">
+                            <div class="time days">
+                                325
+                                <span>Days</span>
+                            </div>
+                        </div>    
+                        <div class="time hours">
+                            09
+                            <span>H</span>
+                        </div>
+                        <div class="time minutes">
+                            54
+                            <span>M</span>
+                        </div>
+                        <div class="time seconds">
+                            30
+                            <span>S</span>
+                        </div>
+                    </div>  
+                </div> 
             </div> 
-            <p class="smalltext">
-                If you are in PC Scan It with <img src="img/gpay-logo.png" class="upilogo" width="40" onclick="window.location.href='https://www.bhimupi.org.in/';">
-       
-            </p>
-            <div class="center">
-                <img id="qrcodescan" class="qrsvg" width="240" height="240" src="" style="dislay: none;">
-                <p id="copiedtext" class="copiedtxt"></p>
-                <p id="holder" class="vpatext"></p>
-                <a id="upibtn" class="paybutton">P A Y</a>
+            <ul class="home-social">
+                <li>
+                <a href="#0"><i class="fab fa-github" aria-hidden="true"></i><span>Facebook</span></a>
+                </li>
+                <li>
+                <a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i><span>Twiiter</span></a>
+                </li>
+                <li>
+                <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                </li>
+            </ul>
+            <div class="home-content__line"></div>
+        </div>
+    </main>
+    <a class="info-toggle" href="#0">
+        <span class="info-menu-icon"></span>
+    </a>
+    <div class="s-info">
+        <div class="row info-wrapper">
+            <div class="col-seven tab-full info-main">
+                <h1>Welcome to Google Play Integrating system</h1>
+                <p>
+               Here all instructions
+                </p>
+                <p>
+                Here some features
+                </p>
+            </div>
+            <div class="col-four tab-full pull-right info-contact">
+                <div class="info-block">
+                    <h3>Start A Conversation</h3>
+                    <p>
+                        <a href="mailto:kmlkantsrma@gmail.com" class="info-email">kmlkantsrma@gmail.com</a><br>
+                        <a href="tel:+917807240936" class="'info-phone">+91 7807240936</a>
+                    </p>
+                </div>
+                <div class="info-block">
+                    <h3>Find Me On</h3>
+                    <ul class="info-social">
+                        <li>
+                            <a href="#0"><i class="fab fa-github" aria-hidden="true"></i>
+                            <span>Github</span></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <span>Linkedin</span></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span>Instagram</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </div> 
+    </div>
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/polygons.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pay-main.js"></script>
 </body>
-<script src="js/main.js"></script>
-<script src="js/authDisable.js"></script>
-<script>
-// document.addEventListener("keydown", function (event) {
-//     if (event.ctrlKey) {
-//         event.preventDefault();
-//     } 
-//     if (event.shiftKey) {
-//         event.preventDefault();
-//     }  
-// });
-
-//  document.onkeydown = function(e) {
-//     if (e.ctrlKey && 
-//         (e.keyCode === 67 || 
-//             e.keyCode === 86 || 
-//             e.keyCode === 85 || 
-//             e.keyCode === 117)) {
-//         alert('not allowed');
-//         return false;
-//     } else {
-//         return true;
-//     }
-// };
-// document.onkeydown = function(e) {
-//   if(event.keyCode == 123) {
-//      return false;
-//   }
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-//      return false;
-//   }
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-//      return false;
-//   }
-//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-//      return false;
-//   }
-//   if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-//     console.log('hit')
-//      return false;
-//   }
-// }
-// document.onkeypress = function (event) {
-//     event = (event || window.event);
-//     if (event.keyCode == 123) {
-//         return false;
-//     }
-// }
-// document.onmousedown = function (event) {
-//     event = (event || window.event);
-//     if (event.keyCode == 123) {
-//         return false;
-//     }
-//     if(event.button == 2)
-//     {
-//       return false; 
-//     }
-// }
-// document.onkeydown = function (event) {
-//         event = (event || window.event);
-//         if (event.keyCode == 123) {
-//         return false;
-//     }
-// }
-// jQuery(document).ready(function($){
-//     $(document).keydown(function(event) {
-//         var pressedKey = String.fromCharCode(event.keyCode).toLowerCase();
-//         if (event.ctrlKey && (pressedKey == "c" || pressedKey == "u")) {
-//             return false;
-//         }
-//     });
-// });
-
-// function mousehandler(e) {
-//     var myevent = (isNS) ? e : event;
-//     var eventbutton = (isNS) ? myevent.which : myevent.button;
-//     if ((eventbutton == 2) || (eventbutton == 3)) return false;
-// }
-// document.oncontextmenu = mischandler;
-// document.onmousedown = mousehandler;
-// document.onmouseup = mousehandler;
-
-// function disableCtrlKeyCombination(e) {
-//     var forbiddenKeys = new Array("a", "s", "c", "x","u");
-//     var key;
-//     var isCtrl;
-//     if (window.event) {
-//         key = window.event.keyCode;
-//         if (window.event.ctrlKey)
-//             isCtrl = true;
-//         else
-//             isCtrl = false;
-//     }
-//     else {
-//         key = e.which;
-//         if (e.ctrlKey)
-//             isCtrl = true;
-//         else
-//             isCtrl = false;
-//     }
-//     if (isCtrl) {
-//         for (i = 0; i < forbiddenKeys.length; i++) {
-//             if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
-//                 return false;
-//             }
-//         }
-//     }
-//     return true;
-// }
-</script>
 </html>
