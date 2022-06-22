@@ -35,7 +35,7 @@ function genLink() {
         document.getElementById("qrcodescan").src = payWith;
         document.getElementById("upibtn").href = UpiToPay;
         document.getElementById("holder").innerHTML = vpaset;
-        document.getElementById("amountPaying").innerHTML = amountset+" ₹";
+        document.getElementById("amountPaying").innerHTML = " "+amountset+" ₹";
 
         
     } else {
