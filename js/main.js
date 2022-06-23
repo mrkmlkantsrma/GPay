@@ -13,17 +13,11 @@
     },
 
     $WIN = $(window);
-
-    // Add the User Agent to the <html>
-    // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
-
-    // svg fallback
     if (!Modernizr.svg) {
         $(".home-logo img").attr("src", "images/logo.png");
     }
-
 
    /* Preloader
     * -------------------------------------------------- */
@@ -33,13 +27,10 @@
 
         $WIN.on('load', function() {
 
-            // will first fade out the loading animation 
             $("#loader").fadeOut("slow", function() {
-                // will fade out the whole DIV that covers the website.
                 $("#preloader").delay(300).fadeOut("slow");
             }); 
-            
-            // for hero content animations 
+ 
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
         
@@ -47,11 +38,8 @@
     };
 
 
-   /* info toggle
-    * ------------------------------------------------------ */
+   /* info toggle */
     var ssInfoToggle = function() {
-
-        //open/close lateral navigation
         $('.info-toggle').on('click', function(event) {
 
             event.preventDefault();
@@ -62,8 +50,7 @@
     };
 
 
-   /* slick slider
-    * ------------------------------------------------------ */
+   /* slick slider */
     var ssSlickSlider = function() {
         
         $('.home-slider').slick({
@@ -78,19 +65,16 @@
     };
 
 
-   /* placeholder plugin settings
-    * ------------------------------------------------------ */
+   /* placeholder plugin settings  */
     var ssPlaceholder = function() {
         $('input, textarea, select').placeholder();
     };
 
 
-   /* final countdown
-    * ------------------------------------------------------ */
+   /* final countdown */
     var ssFinalCountdown = function() {
 
         var finalDate =  new Date("March 25, 2021 15:37:25").getTime();
-        //-date: "Mar 25 2021",
 
         $('.home-content__clock').countdown(finalDate)
         .on('update.countdown finish.countdown', function(event) {
@@ -120,18 +104,6 @@
             language: 'es',
             url: cfg.mailChimpURL
         });
-
-        // Mailchimp translation
-        //
-        //  Defaults:
-        //	 'submit': 'Submitting...',
-        //  0: 'We have sent you a confirmation email',
-        //  1: 'Please enter a value',
-        //  2: 'An email address must contain a single @',
-        //  3: 'The domain portion of the email address is invalid (the portion after the @: )',
-        //  4: 'The username portion of the email address is invalid (the portion before the @: )',
-        //  5: 'This email address looks fake or invalid. Please enter a real email address'
-
         $.ajaxChimp.translations.es = {
             'submit': 'Submitting...',
             0: '<i class="fas fa-check"></i> We have sent you a confirmation email',
@@ -144,8 +116,7 @@
     };
 
 
-   /* initialize
-    * ------------------------------------------------------ */
+   /* initialize */
     (function ssInit() {
         
         ssPreloader();
