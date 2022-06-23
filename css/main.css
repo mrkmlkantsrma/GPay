@@ -1749,42 +1749,6 @@ html.no-csstransitions .home-content__main {
 
 }
 
-@media only screen and (max-width:600px) {
-  .home-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .home-content h1 {
-    font-size: 3.6rem;
-  }
-
-  .home-content__text {
-    padding-right: 10px;
-  }
-
-  .home-content__counter {
-    padding-right: 10px;
-  }
-
-  .home-content__counter .top {
-    display: block;
-    margin-bottom: 1.5rem;
-    left: 0;
-  }
-
-  .home-content__counter .days {
-    font-size: 10rem;
-    padding-right: 5.5rem;
-  }
-
-  .home-copyright {
-    text-align: center;
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-
-}
-
 
 
 @media only screen and (max-width:400px) {
@@ -2271,9 +2235,37 @@ html.no-csstransitions .home-content__main {
   margin-bottom: 2rem;
 }
 
-
-
 @media only screen and (max-width:600px) {
+
+  .home-content h1 {
+    font-size: 3.6rem;
+  }
+
+  .home-content__text {
+    padding-right: 10px;
+  }
+
+  .home-content__counter {
+    padding-right: 10px;
+  }
+
+  .home-content__counter .top {
+    display: block;
+    margin-bottom: 1.5rem;
+    left: 0;
+  }
+
+  .home-content__counter .days {
+    font-size: 10rem;
+    padding-right: 5.5rem;
+  }
+
+  .home-copyright {
+    text-align: center;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
   .s-home {
     min-height: 642px;
     text-align: center;
@@ -2285,6 +2277,7 @@ html.no-csstransitions .home-content__main {
   .home-content h3 {
     padding-left: 0;
     margin-bottom: 25px;
+    font-size: 1.3rem;
   }
   .home-logo img {
     width: 150px;
@@ -2309,7 +2302,6 @@ html.no-csstransitions .home-content__main {
 
   .home-content__main {
     max-width: 420px;
-    margin-top: 11rem;
   }
 
   .home-copyright span {
@@ -2320,15 +2312,6 @@ html.no-csstransitions .home-content__main {
     display: none;
   }
 
-  /* .confirmDiv {
-    display: block;
-  }
-  .confirmDiv .confirmAmount{
-      letter-spacing: 9px;
-      width: 100%;
-      text-align: center;
-      height: 5rem;
-  } */
   .confirmDiv  .confirmbtn {
     padding: 13px 17px;
   }
@@ -2362,6 +2345,7 @@ html.no-csstransitions .home-content__main {
   }
   .home-content__main{
     margin-top: 11rem;
+    margin-bottom: 11rem;
   }
   .home-content__main,
   .home-copyright {
