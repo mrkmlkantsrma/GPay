@@ -1,7 +1,3 @@
-/*!
- * Made by Tuhin Kanti Pal
- * Visit https://tu.hin.life
- */
 var parser = document.createElement('a');
 
 var parserhostname = 'upier-pp.vercel.app';
@@ -65,10 +61,3 @@ function share() {
         console.log('web share not supported');
     }
 }
-
-
-
-/*!
- * Made by Tuhin Kanti Pal
- * Visit https://tu.hin.life
- */
