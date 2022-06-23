@@ -2418,5 +2418,11 @@ html.no-csstransitions .home-content__main {
     text-align: center;
     margin-left: 0px;
   }
+  .holderArea .payattend {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 18px;
+    font-weight: bold;
+  }
 
 }
