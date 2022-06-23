@@ -2410,5 +2410,13 @@ html.no-csstransitions .home-content__main {
   .home-social {
     display: block !important;
   }
+  .outputarea {
+    display: block;
+    text-align: center;
+  }
+  .holderArea {
+    text-align: center;
+    margin-left: 0px;
+  }
 
 }
